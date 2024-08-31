@@ -3,24 +3,35 @@ document.addEventListener("DOMContentLoaded", function () {
   const adFormContainer = document.getElementById("adFormContainer");
   const bannerTitle = document.getElementById("bannerTitle");
   const mainContent = document.getElementById("mainContent");
+  const logo = document.querySelector(".header__logo");
 
-  openFormButton.addEventListener("click", function () {
+  function openForm() {
     adFormContainer.style.display = "block";
     bannerTitle.textContent = "Создание объявления";
-    mainContent.classList.add("hidden"); // Скрываем main
-  });
+    mainContent.classList.add("hidden");
+  }
+
+  function closeForm() {
+    adFormContainer.style.display = "none";
+    bannerTitle.textContent = "Телефоны для вызова эвакуатора в Москве";
+    mainContent.classList.remove("hidden");
+  }
+
+  openFormButton.addEventListener("click", openForm);
 
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
-      adFormContainer.style.display = "none";
-      bannerTitle.textContent = "Телефоны для вызова эвакуатора в Москве";
-      mainContent.classList.remove("hidden");
+      closeForm();
     }
   });
-});
 
-document.getElementById("uploadButton").addEventListener("click", function () {
-  document.getElementById("photoUpload").click();
+  logo.addEventListener("click", closeForm);
+
+  document
+    .getElementById("uploadButton")
+    .addEventListener("click", function () {
+      document.getElementById("photoUpload").click();
+    });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -78,6 +89,7 @@ let currentSlide = 0;
 
 function showSlide(index) {
   const totalSlides = slides.length;
+
   if (index >= totalSlides) {
     currentSlide = 0;
   } else if (index < 0) {
@@ -85,7 +97,9 @@ function showSlide(index) {
   } else {
     currentSlide = index;
   }
-  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+  const slideWidth = slides[0].clientWidth;
+  slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
 }
 
 nextButton.addEventListener("click", () => {
@@ -94,6 +108,10 @@ nextButton.addEventListener("click", () => {
 
 prevButton.addEventListener("click", () => {
   showSlide(currentSlide - 1);
+});
+
+window.addEventListener("resize", () => {
+  showSlide(currentSlide);
 });
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -400,6 +400,11 @@ select:required:invalid {
   font-weight: bold;
   float: right;
 }
+@media screen and (max-width: 820px) {
+  .content .card .card-list span {
+    float: none;
+  }
+}
 .content .card .card-list .card-item {
   color: #777777;
   background-color: #f2f4f8;
@@ -810,7 +815,7 @@ select:required:invalid {
     width: 100px;
     height: 100px;
     top: -45px;
-    left: 30%;
+    left: 28%;
   }
 }
 .cost-section__feature img {
@@ -832,9 +837,14 @@ select:required:invalid {
   z-index: 1;
   margin-top: 30px;
 }
-@media (max-width: 820px) {
+@media screen and (max-width: 820px) {
   .cost-section__feature h5 {
     font-size: 24px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .cost-section__feature h5 {
+    font-size: 18px;
   }
 }
 .cost-section__feature p {
@@ -844,6 +854,11 @@ select:required:invalid {
 @media (max-width: 820px) {
   .cost-section__feature p {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .cost-section__feature p {
+    font-size: 14px;
   }
 }
 @media (max-width: 1366px) {
@@ -950,6 +965,7 @@ select:required:invalid {
   }
 }
 .benefits-section__icon {
+  padding-top: 6px;
   margin-right: 16px;
 }
 @media (max-width: 1366px) {
@@ -1014,6 +1030,12 @@ select:required:invalid {
 @media (max-width: 1366px) {
   .how-to-section__item {
     width: 80%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 820px) {
+  .how-to-section__item {
+    width: 70%;
     margin-bottom: 20px;
   }
 }
@@ -1092,7 +1114,6 @@ select:required:invalid {
 .slider-section .slide {
   min-width: 100%;
   display: flex;
-  justify-content: space-around;
   gap: 32px;
 }
 @media screen and (max-width: 1366px) {
@@ -1104,6 +1125,7 @@ select:required:invalid {
 }
 .slider-section .slide-item {
   width: 45%;
+  height: auto;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -1187,6 +1209,12 @@ select:required:invalid {
   border: 1px solid #0297d4;
   border-radius: 6px;
   cursor: pointer;
+}
+@media screen and (max-width: 430px) {
+  .slider-section .slider-controls button {
+    width: 42px;
+    height: 42px;
+  }
 }
 .slider-section .slider-controls button:hover {
   background-color: #0297d4;
