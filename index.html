@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Телефоны для вызова эвакуатора в Москве</title>
+    <link rel="stylesheet" href="scss/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <img src="img/logo.svg" alt="Логотип" class="header__logo-img" />
+        </div>
+        <nav class="header__nav">
+          <div class="header__nav-container">
+            <a href="#" class="header__nav-link">О проекте</a>
+            <a href="#" class="header__nav-link">Контакты</a>
+          </div>
+          <button class="header__nav-button" id="openFormButton">
+            Добавить объявление
+          </button>
+        </nav>
+      </div>
+      <section class="banner">
+        <h1 class="banner__title" id="bannerTitle">
+          Телефоны для вызова эвакуатора в <a href="">Москве</a>
+        </h1>
+      </section>
+    </header>
+
+    <div class="form-container" id="adFormContainer">
+      <form action="#" method="post" class="ad-form">
+        <div class="form-header">
+          <img src="img/dollar.svg" alt="доллар" />
+          <p>
+            Заполните все поля формы на размещение своего объявления на сайте.
+            Размещение объявления платное. Стоимость за одно объявление
+            составляет <strong>990 руб.</strong> Объявление будет опубликовано
+            на сайте после оплаты и проверки модератором.
+          </p>
+        </div>
+        <div class="form-main">
+          <div class="form-group">
+            <label for="city">Выберите город</label>
+            <select id="city" name="city">
+              <option value="Москва">Москва</option>
+              <option value="Санкт-Петербург">Санкт-Петербург</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="mobile-phone">Номер мобильного телефона</label>
+            <input
+              type="tel"
+              id="mobile-phone"
+              name="mobile-phone"
+              placeholder="+7 (999) 999 99 99"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="landline-phone">Номер городского телефона</label>
+            <input
+              type="tel"
+              id="landline-phone"
+              name="landline-phone"
+              placeholder="+7 (999) 999 99 99"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Ваш email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@gmail.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="tow-location">Адрес стоянки эвакуатора</label>
+            <input type="text" id="tow-location" name="tow-location" required />
+          </div>
+
+          <hr class="divider" />
+
+          <h3>Информация</h3>
+
+          <div class="form-group">
+            <label for="title">Заголовок объявления</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Не более 50 символов"
+              maxlength="50"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="description">Описание объявления</label>
+            <textarea
+              id="description"
+              name="description"
+              placeholder="Не более 50 символов"
+              maxlength="50"
+              required
+            ></textarea>
+          </div>
+
+          <hr class="divider" />
+
+          <h3>Цены</h3>
+
+          <div class="form-group-2">
+            <label for="carPrice">Легковые автомобили</label>
+            <input type="text" id="carPrice" name="carPrice" />
+            <span>рублей</span>
+            <input type="checkbox" id="carService" name="carService" /> Услугу
+            не оказываю
+          </div>
+
+          <div class="form-group-2">
+            <label for="motoPrice">Мототехника</label>
+            <input type="text" id="motoPrice" name="motoPrice" />
+            <span>рублей</span>
+            <input type="checkbox" id="motoService" name="motoService" /> Услугу
+            не оказываю
+          </div>
+
+          <div class="form-group-2">
+            <label for="suvPrice">Внедорожник</label>
+            <input type="text" id="suvPrice" name="suvPrice" />
+            <span>рублей</span>
+            <input type="checkbox" id="suvService" name="suvService" /> Услугу
+            не оказываю
+          </div>
+
+          <div class="form-group-2">
+            <label for="minibusPrice">Микроавтобус</label>
+            <input type="text" id="minibusPrice" name="minibusPrice" />
+            <span>рублей</span>
+            <input type="checkbox" id="minibusService" name="minibusService" />
+            Услугу не оказываю
+          </div>
+
+          <div class="form-group-2">
+            <label for="countryPrice">Загородный тариф</label>
+            <input type="text" id="countryPrice" name="countryPrice" />
+            <span>рублей</span>
+            <input type="checkbox" id="countryService" name="countryService" />
+            Услугу не оказываю
+          </div>
+
+          <hr class="divider" />
+
+          <h3>Фото</h3>
+
+          <div class="form-group">
+            <label for="photoUpload">Прикрепите фотографию к объявлению</label>
+
+            <button type="button" id="uploadButton" name="photoUpload">
+              Загрузить
+            </button>
+
+            <input
+              type="file"
+              id="photoUpload"
+              name="photoUpload"
+              style="display: none"
+            />
+          </div>
+
+          <div class="form-group-3">
+            <input type="checkbox" id="agreement" name="agreement" required />
+            <label for="agreement"
+              >Я соглашаюсь с правилами использования сервиса, а также с
+              передачей и обработкой моих данных в evarus.ru. Я подтверждаю своё
+              совершеннолетие и ответственность за размещение.</label
+            >
+          </div>
+
+          <button type="submit" class="submit-button">Продолжить</button>
+        </div>
+      </form>
+    </div>
+
+    <main class="main" id="mainContent">
+      <section class="content">
+        <div id="cards-container">
+          <article class="card">
+            <h2 class="card-title">Эвакуатор</h2>
+            <div class="card-content">
+              <div>
+                <img
+                  class="card-image"
+                  src="img/tow-truck-1.png"
+                  alt="Эвакуатор"
+                />
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  Легковой автомобиль <span>5 000 руб</span>
+                </li>
+                <li class="card-item">
+                  Мотоцикл (квадроцикл и т.д.) <span>3 000 руб</span>
+                </li>
+                <li class="card-item">Внедорожник <span>нет</span></li>
+                <li class="card-item">Микроавтобус <span>нет</span></li>
+                <li class="card-item">
+                  Загородный тариф <span>50 руб/км</span>
+                </li>
+              </ul>
+              <div class="card-contacts">
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img class="card-icon" src="img/icon-phone.svg" alt="" />+7
+                  999 99 99</a
+                >
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img
+                    class="card-icon"
+                    src="img/icon-telephone.svg"
+                    alt=""
+                  />+7 999 99 99</a
+                >
+                <div class="card-address">
+                  <div class="card-location">
+                    <img class="card-img" src="img/icon-location.svg" alt="" />
+                    <div>Место стоянки</div>
+                  </div>
+                  <span> Москва, ул Пушкина</span>
+                </div>
+                <button class="card-button">Заказать рекламу</button>
+              </div>
+            </div>
+            <p class="card-desc">
+              Эвакуатор авто. Всегда на связи! Быстро и надежно
+            </p>
+          </article>
+
+          <article class="card">
+            <h2 class="card-title">Эвакуатор</h2>
+            <div class="card-content">
+              <div>
+                <img
+                  class="card-image"
+                  src="img/tow-truck-2.png"
+                  alt="Эвакуатор"
+                />
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  Легковой автомобиль <span>5 000 руб</span>
+                </li>
+                <li class="card-item">
+                  Мотоцикл (квадроцикл и т.д.) <span>3 000 руб</span>
+                </li>
+                <li class="card-item">Внедорожник <span>нет</span></li>
+                <li class="card-item">Микроавтобус <span>нет</span></li>
+                <li class="card-item">
+                  Загородный тариф <span>50 руб/км</span>
+                </li>
+              </ul>
+              <div class="card-contacts">
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img class="card-icon" src="img/icon-phone.svg" alt="" />+7
+                  999 99 99</a
+                >
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img
+                    class="card-icon"
+                    src="img/icon-telephone.svg"
+                    alt=""
+                  />+7 999 99 99</a
+                >
+                <div class="card-address">
+                  <div class="card-location">
+                    <img class="card-img" src="img/icon-location.svg" alt="" />
+                    <div>Место стоянки</div>
+                  </div>
+                  <span> Москва, ул Пушкина</span>
+                </div>
+                <button class="card-button">Заказать рекламу</button>
+              </div>
+            </div>
+            <p class="card-desc">
+              Круглосуточно. Стоянка в районе метро Технопарк, быстро доберусь в
+              любую точку города.
+            </p>
+          </article>
+
+          <article class="card">
+            <h2 class="card-title">Эвакуатор</h2>
+            <div class="card-content">
+              <div>
+                <img
+                  class="card-image"
+                  src="img/tow-truck-1.png"
+                  alt="Эвакуатор"
+                />
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  Легковой автомобиль <span>5 000 руб</span>
+                </li>
+                <li class="card-item">
+                  Мотоцикл (квадроцикл и т.д.) <span>3 000 руб</span>
+                </li>
+                <li class="card-item">Внедорожник <span>нет</span></li>
+                <li class="card-item">Микроавтобус <span>нет</span></li>
+                <li class="card-item">
+                  Загородный тариф <span>50 руб/км</span>
+                </li>
+              </ul>
+              <div class="card-contacts">
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img class="card-icon" src="img/icon-phone.svg" alt="" />+7
+                  999 99 99</a
+                >
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img
+                    class="card-icon"
+                    src="img/icon-telephone.svg"
+                    alt=""
+                  />+7 999 99 99</a
+                >
+                <div class="card-address">
+                  <div class="card-location">
+                    <img class="card-img" src="img/icon-location.svg" alt="" />
+                    <div>Место стоянки</div>
+                  </div>
+                  <span> Москва, ул Пушкина</span>
+                </div>
+                <button class="card-button">Заказать рекламу</button>
+              </div>
+            </div>
+            <p class="card-desc">
+              Эвакуатор авто. Всегда на связи! Быстро и надежно
+            </p>
+          </article>
+
+          <article class="card">
+            <h2 class="card-title">Эвакуатор</h2>
+            <div class="card-content">
+              <div>
+                <img
+                  class="card-image"
+                  src="img/tow-truck-2.png"
+                  alt="Эвакуатор"
+                />
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  Легковой автомобиль <span>5 000 руб</span>
+                </li>
+                <li class="card-item">
+                  Мотоцикл (квадроцикл и т.д.) <span>3 000 руб</span>
+                </li>
+                <li class="card-item">Внедорожник <span>нет</span></li>
+                <li class="card-item">Микроавтобус <span>нет</span></li>
+                <li class="card-item">
+                  Загородный тариф <span>50 руб/км</span>
+                </li>
+              </ul>
+              <div class="card-contacts">
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img class="card-icon" src="img/icon-phone.svg" alt="" />+7
+                  999 99 99</a
+                >
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img
+                    class="card-icon"
+                    src="img/icon-telephone.svg"
+                    alt=""
+                  />+7 999 99 99</a
+                >
+                <div class="card-address">
+                  <div class="card-location">
+                    <img class="card-img" src="img/icon-location.svg" alt="" />
+                    <div>Место стоянки</div>
+                  </div>
+                  <span> Москва, ул Пушкина</span>
+                </div>
+                <button class="card-button">Заказать рекламу</button>
+              </div>
+            </div>
+            <p class="card-desc">
+              Круглосуточно. Стоянка в районе метро Технопарк, быстро доберусь в
+              любую точку города.
+            </p>
+          </article>
+
+          <article class="card">
+            <h2 class="card-title">Эвакуатор</h2>
+            <div class="card-content">
+              <div>
+                <img
+                  class="card-image"
+                  src="img/tow-truck-1.png"
+                  alt="Эвакуатор"
+                />
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  Легковой автомобиль <span>5 000 руб</span>
+                </li>
+                <li class="card-item">
+                  Мотоцикл (квадроцикл и т.д.) <span>3 000 руб</span>
+                </li>
+                <li class="card-item">Внедорожник <span>нет</span></li>
+                <li class="card-item">Микроавтобус <span>нет</span></li>
+                <li class="card-item">
+                  Загородный тариф <span>50 руб/км</span>
+                </li>
+              </ul>
+              <div class="card-contacts">
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img class="card-icon" src="img/icon-phone.svg" alt="" />+7
+                  999 99 99</a
+                >
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img
+                    class="card-icon"
+                    src="img/icon-telephone.svg"
+                    alt=""
+                  />+7 999 99 99</a
+                >
+                <div class="card-address">
+                  <div class="card-location">
+                    <img class="card-img" src="img/icon-location.svg" alt="" />
+                    <div>Место стоянки</div>
+                  </div>
+                  <span> Москва, ул Пушкина</span>
+                </div>
+                <button class="card-button">Заказать рекламу</button>
+              </div>
+            </div>
+            <p class="card-desc">
+              Эвакуатор авто. Всегда на связи! Быстро и надежно
+            </p>
+          </article>
+          <article class="card">
+            <h2 class="card-title">Эвакуатор</h2>
+            <div class="card-content">
+              <div>
+                <img
+                  class="card-image"
+                  src="img/tow-truck-1.png"
+                  alt="Эвакуатор"
+                />
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  Легковой автомобиль <span>5 000 руб</span>
+                </li>
+                <li class="card-item">
+                  Мотоцикл (квадроцикл и т.д.) <span>3 000 руб</span>
+                </li>
+                <li class="card-item">Внедорожник <span>нет</span></li>
+                <li class="card-item">Микроавтобус <span>нет</span></li>
+                <li class="card-item">
+                  Загородный тариф <span>50 руб/км</span>
+                </li>
+              </ul>
+              <div class="card-contacts">
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img class="card-icon" src="img/icon-phone.svg" alt="" />+7
+                  999 99 99</a
+                >
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img
+                    class="card-icon"
+                    src="img/icon-telephone.svg"
+                    alt=""
+                  />+7 999 99 99</a
+                >
+                <div class="card-address">
+                  <div class="card-location">
+                    <img class="card-img" src="img/icon-location.svg" alt="" />
+                    <div>Место стоянки</div>
+                  </div>
+                  <span> Москва, ул Пушкина</span>
+                </div>
+                <button class="card-button">Заказать рекламу</button>
+              </div>
+            </div>
+            <p class="card-desc">
+              Эвакуатор авто. Всегда на связи! Быстро и надежно
+            </p>
+          </article>
+          <article class="card">
+            <h2 class="card-title">Эвакуатор</h2>
+            <div class="card-content">
+              <div>
+                <img
+                  class="card-image"
+                  src="img/tow-truck-1.png"
+                  alt="Эвакуатор"
+                />
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  Легковой автомобиль <span>5 000 руб</span>
+                </li>
+                <li class="card-item">
+                  Мотоцикл (квадроцикл и т.д.) <span>3 000 руб</span>
+                </li>
+                <li class="card-item">Внедорожник <span>нет</span></li>
+                <li class="card-item">Микроавтобус <span>нет</span></li>
+                <li class="card-item">
+                  Загородный тариф <span>50 руб/км</span>
+                </li>
+              </ul>
+              <div class="card-contacts">
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img class="card-icon" src="img/icon-phone.svg" alt="" />+7
+                  999 99 99</a
+                >
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img
+                    class="card-icon"
+                    src="img/icon-telephone.svg"
+                    alt=""
+                  />+7 999 99 99</a
+                >
+                <div class="card-address">
+                  <div class="card-location">
+                    <img class="card-img" src="img/icon-location.svg" alt="" />
+                    <div>Место стоянки</div>
+                  </div>
+                  <span> Москва, ул Пушкина</span>
+                </div>
+                <button class="card-button">Заказать рекламу</button>
+              </div>
+            </div>
+            <p class="card-desc">
+              Эвакуатор авто. Всегда на связи! Быстро и надежно
+            </p>
+          </article>
+          <article class="card">
+            <h2 class="card-title">Эвакуатор</h2>
+            <div class="card-content">
+              <div>
+                <img
+                  class="card-image"
+                  src="img/tow-truck-1.png"
+                  alt="Эвакуатор"
+                />
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  Легковой автомобиль <span>5 000 руб</span>
+                </li>
+                <li class="card-item">
+                  Мотоцикл (квадроцикл и т.д.) <span>3 000 руб</span>
+                </li>
+                <li class="card-item">Внедорожник <span>нет</span></li>
+                <li class="card-item">Микроавтобус <span>нет</span></li>
+                <li class="card-item">
+                  Загородный тариф <span>50 руб/км</span>
+                </li>
+              </ul>
+              <div class="card-contacts">
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img class="card-icon" src="img/icon-phone.svg" alt="" />+7
+                  999 99 99</a
+                >
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img
+                    class="card-icon"
+                    src="img/icon-telephone.svg"
+                    alt=""
+                  />+7 999 99 99</a
+                >
+                <div class="card-address">
+                  <div class="card-location">
+                    <img class="card-img" src="img/icon-location.svg" alt="" />
+                    <div>Место стоянки</div>
+                  </div>
+                  <span> Москва, ул Пушкина</span>
+                </div>
+                <button class="card-button">Заказать рекламу</button>
+              </div>
+            </div>
+            <p class="card-desc">
+              Эвакуатор авто. Всегда на связи! Быстро и надежно
+            </p>
+          </article>
+          <article class="card">
+            <h2 class="card-title">Эвакуатор</h2>
+            <div class="card-content">
+              <div>
+                <img
+                  class="card-image"
+                  src="img/tow-truck-2.png"
+                  alt="Эвакуатор"
+                />
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  Легковой автомобиль <span>5 000 руб</span>
+                </li>
+                <li class="card-item">
+                  Мотоцикл (квадроцикл и т.д.) <span>3 000 руб</span>
+                </li>
+                <li class="card-item">Внедорожник <span>нет</span></li>
+                <li class="card-item">Микроавтобус <span>нет</span></li>
+                <li class="card-item">
+                  Загородный тариф <span>50 руб/км</span>
+                </li>
+              </ul>
+              <div class="card-contacts">
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img class="card-icon" src="img/icon-phone.svg" alt="" />+7
+                  999 99 99</a
+                >
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img
+                    class="card-icon"
+                    src="img/icon-telephone.svg"
+                    alt=""
+                  />+7 999 99 99</a
+                >
+                <div class="card-address">
+                  <div class="card-location">
+                    <img class="card-img" src="img/icon-location.svg" alt="" />
+                    <div>Место стоянки</div>
+                  </div>
+                  <span> Москва, ул Пушкина</span>
+                </div>
+                <button class="card-button">Заказать рекламу</button>
+              </div>
+            </div>
+            <p class="card-desc">
+              Круглосуточно. Стоянка в районе метро Технопарк, быстро доберусь в
+              любую точку города.
+            </p>
+          </article>
+          <article class="card">
+            <h2 class="card-title">Эвакуатор</h2>
+            <div class="card-content">
+              <div>
+                <img
+                  class="card-image"
+                  src="img/tow-truck-2.png"
+                  alt="Эвакуатор"
+                />
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  Легковой автомобиль <span>5 000 руб</span>
+                </li>
+                <li class="card-item">
+                  Мотоцикл (квадроцикл и т.д.) <span>3 000 руб</span>
+                </li>
+                <li class="card-item">Внедорожник <span>нет</span></li>
+                <li class="card-item">Микроавтобус <span>нет</span></li>
+                <li class="card-item">
+                  Загородный тариф <span>50 руб/км</span>
+                </li>
+              </ul>
+              <div class="card-contacts">
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img class="card-icon" src="img/icon-phone.svg" alt="" />+7
+                  999 99 99</a
+                >
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img
+                    class="card-icon"
+                    src="img/icon-telephone.svg"
+                    alt=""
+                  />+7 999 99 99</a
+                >
+                <div class="card-address">
+                  <div class="card-location">
+                    <img class="card-img" src="img/icon-location.svg" alt="" />
+                    <div>Место стоянки</div>
+                  </div>
+                  <span> Москва, ул Пушкина</span>
+                </div>
+                <button class="card-button">Заказать рекламу</button>
+              </div>
+            </div>
+            <p class="card-desc">
+              Круглосуточно. Стоянка в районе метро Технопарк, быстро доберусь в
+              любую точку города.
+            </p>
+          </article>
+          <article class="card">
+            <h2 class="card-title">Эвакуатор</h2>
+            <div class="card-content">
+              <div>
+                <img
+                  class="card-image"
+                  src="img/tow-truck-2.png"
+                  alt="Эвакуатор"
+                />
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  Легковой автомобиль <span>5 000 руб</span>
+                </li>
+                <li class="card-item">
+                  Мотоцикл (квадроцикл и т.д.) <span>3 000 руб</span>
+                </li>
+                <li class="card-item">Внедорожник <span>нет</span></li>
+                <li class="card-item">Микроавтобус <span>нет</span></li>
+                <li class="card-item">
+                  Загородный тариф <span>50 руб/км</span>
+                </li>
+              </ul>
+              <div class="card-contacts">
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img class="card-icon" src="img/icon-phone.svg" alt="" />+7
+                  999 99 99</a
+                >
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img
+                    class="card-icon"
+                    src="img/icon-telephone.svg"
+                    alt=""
+                  />+7 999 99 99</a
+                >
+                <div class="card-address">
+                  <div class="card-location">
+                    <img class="card-img" src="img/icon-location.svg" alt="" />
+                    <div>Место стоянки</div>
+                  </div>
+                  <span> Москва, ул Пушкина</span>
+                </div>
+                <button class="card-button">Заказать рекламу</button>
+              </div>
+            </div>
+            <p class="card-desc">
+              Круглосуточно. Стоянка в районе метро Технопарк, быстро доберусь в
+              любую точку города.
+            </p>
+          </article>
+          <article class="card">
+            <h2 class="card-title">Эвакуатор</h2>
+            <div class="card-content">
+              <div>
+                <img
+                  class="card-image"
+                  src="img/tow-truck-2.png"
+                  alt="Эвакуатор"
+                />
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  Легковой автомобиль <span>5 000 руб</span>
+                </li>
+                <li class="card-item">
+                  Мотоцикл (квадроцикл и т.д.) <span>3 000 руб</span>
+                </li>
+                <li class="card-item">Внедорожник <span>нет</span></li>
+                <li class="card-item">Микроавтобус <span>нет</span></li>
+                <li class="card-item">
+                  Загородный тариф <span>50 руб/км</span>
+                </li>
+              </ul>
+              <div class="card-contacts">
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img class="card-icon" src="img/icon-phone.svg" alt="" />+7
+                  999 99 99</a
+                >
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img
+                    class="card-icon"
+                    src="img/icon-telephone.svg"
+                    alt=""
+                  />+7 999 99 99</a
+                >
+                <div class="card-address">
+                  <div class="card-location">
+                    <img class="card-img" src="img/icon-location.svg" alt="" />
+                    <div>Место стоянки</div>
+                  </div>
+                  <span> Москва, ул Пушкина</span>
+                </div>
+                <button class="card-button">Заказать рекламу</button>
+              </div>
+            </div>
+            <p class="card-desc">
+              Круглосуточно. Стоянка в районе метро Технопарк, быстро доберусь в
+              любую точку города.
+            </p>
+          </article>
+          <article class="card">
+            <h2 class="card-title">Эвакуатор</h2>
+            <div class="card-content">
+              <div>
+                <img
+                  class="card-image"
+                  src="img/tow-truck-2.png"
+                  alt="Эвакуатор"
+                />
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  Легковой автомобиль <span>5 000 руб</span>
+                </li>
+                <li class="card-item">
+                  Мотоцикл (квадроцикл и т.д.) <span>3 000 руб</span>
+                </li>
+                <li class="card-item">Внедорожник <span>нет</span></li>
+                <li class="card-item">Микроавтобус <span>нет</span></li>
+                <li class="card-item">
+                  Загородный тариф <span>50 руб/км</span>
+                </li>
+              </ul>
+              <div class="card-contacts">
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img class="card-icon" src="img/icon-phone.svg" alt="" />+7
+                  999 99 99</a
+                >
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img
+                    class="card-icon"
+                    src="img/icon-telephone.svg"
+                    alt=""
+                  />+7 999 99 99</a
+                >
+                <div class="card-address">
+                  <div class="card-location">
+                    <img class="card-img" src="img/icon-location.svg" alt="" />
+                    <div>Место стоянки</div>
+                  </div>
+                  <span> Москва, ул Пушкина</span>
+                </div>
+                <button class="card-button">Заказать рекламу</button>
+              </div>
+            </div>
+            <p class="card-desc">
+              Круглосуточно. Стоянка в районе метро Технопарк, быстро доберусь в
+              любую точку города.
+            </p>
+          </article>
+          <article class="card">
+            <h2 class="card-title">Эвакуатор</h2>
+            <div class="card-content">
+              <div>
+                <img
+                  class="card-image"
+                  src="img/tow-truck-1.png"
+                  alt="Эвакуатор"
+                />
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  Легковой автомобиль <span>5 000 руб</span>
+                </li>
+                <li class="card-item">
+                  Мотоцикл (квадроцикл и т.д.) <span>3 000 руб</span>
+                </li>
+                <li class="card-item">Внедорожник <span>нет</span></li>
+                <li class="card-item">Микроавтобус <span>нет</span></li>
+                <li class="card-item">
+                  Загородный тариф <span>50 руб/км</span>
+                </li>
+              </ul>
+              <div class="card-contacts">
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img class="card-icon" src="img/icon-phone.svg" alt="" />+7
+                  999 99 99</a
+                >
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img
+                    class="card-icon"
+                    src="img/icon-telephone.svg"
+                    alt=""
+                  />+7 999 99 99</a
+                >
+                <div class="card-address">
+                  <div class="card-location">
+                    <img class="card-img" src="img/icon-location.svg" alt="" />
+                    <div>Место стоянки</div>
+                  </div>
+                  <span> Москва, ул Пушкина</span>
+                </div>
+                <button class="card-button">Заказать рекламу</button>
+              </div>
+            </div>
+            <p class="card-desc">
+              Эвакуатор авто. Всегда на связи! Быстро и надежно
+            </p>
+          </article>
+          <article class="card">
+            <h2 class="card-title">Эвакуатор</h2>
+            <div class="card-content">
+              <div>
+                <img
+                  class="card-image"
+                  src="img/tow-truck-2.png"
+                  alt="Эвакуатор"
+                />
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  Легковой автомобиль <span>5 000 руб</span>
+                </li>
+                <li class="card-item">
+                  Мотоцикл (квадроцикл и т.д.) <span>3 000 руб</span>
+                </li>
+                <li class="card-item">Внедорожник <span>нет</span></li>
+                <li class="card-item">Микроавтобус <span>нет</span></li>
+                <li class="card-item">
+                  Загородный тариф <span>50 руб/км</span>
+                </li>
+              </ul>
+              <div class="card-contacts">
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img class="card-icon" src="img/icon-phone.svg" alt="" />+7
+                  999 99 99</a
+                >
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img
+                    class="card-icon"
+                    src="img/icon-telephone.svg"
+                    alt=""
+                  />+7 999 99 99</a
+                >
+                <div class="card-address">
+                  <div class="card-location">
+                    <img class="card-img" src="img/icon-location.svg" alt="" />
+                    <div>Место стоянки</div>
+                  </div>
+                  <span> Москва, ул Пушкина</span>
+                </div>
+                <button class="card-button">Заказать рекламу</button>
+              </div>
+            </div>
+            <p class="card-desc">
+              Круглосуточно. Стоянка в районе метро Технопарк, быстро доберусь в
+              любую точку города.
+            </p>
+          </article>
+          <article class="card">
+            <h2 class="card-title">Эвакуатор</h2>
+            <div class="card-content">
+              <div>
+                <img
+                  class="card-image"
+                  src="img/tow-truck-1.png"
+                  alt="Эвакуатор"
+                />
+              </div>
+              <ul class="card-list">
+                <li class="card-item">
+                  Легковой автомобиль <span>5 000 руб</span>
+                </li>
+                <li class="card-item">
+                  Мотоцикл (квадроцикл и т.д.) <span>3 000 руб</span>
+                </li>
+                <li class="card-item">Внедорожник <span>нет</span></li>
+                <li class="card-item">Микроавтобус <span>нет</span></li>
+                <li class="card-item">
+                  Загородный тариф <span>50 руб/км</span>
+                </li>
+              </ul>
+              <div class="card-contacts">
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img class="card-icon" src="img/icon-phone.svg" alt="" />+7
+                  999 99 99</a
+                >
+                <a href="tel:+79999999999" class="card-phone"
+                  ><img
+                    class="card-icon"
+                    src="img/icon-telephone.svg"
+                    alt=""
+                  />+7 999 99 99</a
+                >
+                <div class="card-address">
+                  <div class="card-location">
+                    <img class="card-img" src="img/icon-location.svg" alt="" />
+                    <div>Место стоянки</div>
+                  </div>
+                  <span> Москва, ул Пушкина</span>
+                </div>
+                <button class="card-button">Заказать рекламу</button>
+              </div>
+            </div>
+            <p class="card-desc">
+              Эвакуатор авто. Всегда на связи! Быстро и надежно
+            </p>
+          </article>
+        </div>
+
+        <div class="pagination">
+          <button class="pagination__button" data-page="1">1</button>
+          <button class="pagination__button" data-page="2">2</button>
+          <button class="pagination__button" data-page="3">3</button>
+          <button class="pagination__button" data-page="4">4</button>
+          <button class="pagination__button-next">
+            <img
+              class="pagination__icon"
+              src="img/arrow-right.svg"
+              alt="стрелка вправо"
+            />
+          </button>
+        </div>
+      </section>
+
+      <section class="advertisement">
+        <div class="advertisement__content">
+          <img src="img/Illustration.svg" alt="" />
+          <p class="advertisement__text">Здесь может быть ваш эвакуатор</p>
+          <button class="header__nav-button">Добавить объявление</button>
+        </div>
+      </section>
+
+      <section class="info">
+        <div class="info__content">
+          <div class="info__section">
+            <h2 class="info__title">Как вызвать эвакуатор в Москве дешево?</h2>
+            <p class="info__desc">
+              Поломка авто или ДТП – случайностей на дороге много. Решение одно
+              – вызвать эвакуатор и доставить неисправный автомобиль на
+              СТО/парковку или в гараж в Москве. С помощью онлайн-сервиса Зваку
+              вы сможете заказать услугу эвакуатора в Москве (Московской
+              области) максимально быстро и при этом сэкономить.
+            </p>
+            <p class="info__desc">
+              Мы предоставляем доступ к базе коммерческих и частных эвакуаторов
+              Москвы. Это надежные компании, которые оперативно пришлют
+              спецтехнику вам на помощь и обеспечат безопасную транспортировку
+              авто.
+            </p>
+          </div>
+          <img src="img/human.png" alt="Человек" class="info__person" />
+        </div>
+      </section>
+      <section class="info-section">
+        <div class="info-section__container">
+          <h2 class="info-section__title">
+            Что нужно знать, чтобы заказать эвакуатор в Москве
+          </h2>
+          <div class="info-section__content">
+            <div class="info-section__item">
+              <img
+                src="img/icon-tow-truck.png"
+                alt="Эвакуатор"
+                class="info-section__icon"
+              />
+              <p class="info-section__text">
+                Заказы на вызов эвакуатора в Москве перевозчики-партнеры "Тут
+                Эвакуатор" принимают круглосуточно. Когда бы вы не позвонили,
+                эвакуатор найдется всегда. Размещая заказ на эвакуатор,
+                ознакомьтесь с информацией о транспортной компании,
+                проконсультируйтесь с ее специалистами и выберите оптимальный
+                вариант перевозки своего ТС.
+              </p>
+            </div>
+            <div class="info-section__item">
+              <img
+                src="img/icon-car.png"
+                alt="Автомобиль"
+                class="info-section__icon"
+              />
+              <p class="info-section__text">
+                Примите во внимание, что одни и те же виды эвакуаторов
+                рассчитаны на транспортировку авто разных классов. Вопрос
+                заключается лишь в том, какой тип эвакуатора будет выгоднее
+                действовать в вашем случае. Следуя рекомендациям перевозчика, вы
+                сможете недорого эвакуировать авто как в Москве, так и в
+                области.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cost-section">
+        <div class="cost-section__container">
+          <h2 class="cost-section__title">
+            Что входит в стоимость перевозки эвакуатором
+          </h2>
+          <p class="cost-section__description">
+            Стоимость эвакуации включает в себя оплату услуг по погрузке,
+            перевозке и выгрузке авто, а также по подаче эвакуатора в пункт
+            дислокации ТС в Москве.
+          </p>
+          <p class="cost-section__sub-description">
+            При формировании цены перевозчики берут в расчет четыре аспекта:
+          </p>
+          <div class="cost-section__features">
+            <div class="cost-section__feature">
+              <div class="cost-section__feature-icon">
+                <img
+                  class="cost-section__feature-img"
+                  src="img/icon-car.svg"
+                  alt=""
+                />
+              </div>
+              <h5>Грузоподъемность эвакуатора</h5>
+              <p class="cost-section__feature-text">
+                Чем мощнее эвакуатор, тем дороже обходится ее эксплуатация, ем
+                внушительнее будет сумма к оплате эвакуации
+              </p>
+            </div>
+            <div class="cost-section__feature">
+              <div class="cost-section__feature-icon">
+                <img
+                  class="cost-section__feature-img"
+                  src="img/icon-mileage.svg"
+                  alt=""
+                />
+              </div>
+              <h5>Предполагаемый пробег</h5>
+              <p class="cost-section__feature-text">
+                Учитывается удаленность стоянки эвакуатора от местоположения ТС,
+                расстояние между пунктами погрузки в Москве и выгрузки авто
+              </p>
+            </div>
+            <div class="cost-section__feature">
+              <div class="cost-section__feature-icon">
+                <img
+                  class="cost-section__feature-img"
+                  src="img/icon-equipment.svg"
+                  alt=""
+                />
+              </div>
+              <h5>Дополнительное оборудование</h5>
+              <p class="cost-section__feature-text">
+                При эвакуации машин с серьезными поломками перевозчики оснащают
+                эвакуатор вспомогательными приспособлениями, что закономерно
+                отражается на стоимости транспортировки.
+              </p>
+            </div>
+            <div class="cost-section__feature">
+              <div class="cost-section__feature-icon">
+                <img
+                  class="cost-section__feature-img"
+                  src="img/icon-complexity.svg"
+                  alt=""
+                />
+              </div>
+              <h5>Уровень сложности</h5>
+              <p class="cost-section__feature-text">
+                При значительном повреждении автомобиля погрузочно-разгрузочные
+                работы усложняются. Они требуют подключения водителя-оператора
+                высокой квалификации
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="benefits-section">
+        <div class="benefits-section__container">
+          <h2 class="benefits-section__title">
+            Преимущества онлайн-сервиса ТутЭвакуатор.Ру
+          </h2>
+          <div class="benefits-section__wrapper">
+            <div class="benefits-section__info">
+              <div class="benefits-section__item">
+                <p class="benefits-section__description">
+                  ТутЭвакуатор.Ру — это удобный сервис для тех, кому нужно
+                  недорого и быстро перевезти авто с техническими
+                  неисправностями или же с повреждениями, полученными при ДТП в
+                  Москве.
+                </p>
+                <span class="benefits-section__sub"
+                  >Воспользовавшись ТутЭвакуатор.ру, вы сможете:</span
+                >
+                <div class="benefits-section__content">
+                  <div class="benefits-section__list">
+                    <ul>
+                      <div class="benefits-section__list-item">
+                        <img
+                          class="benefits-section__icon"
+                          src="img/icon-done.svg"
+                          alt="галочка"
+                        />
+                        <li>
+                          получить постоянный доступ к базе надежных
+                          перевозчиков Москвы — сервис работает всегда, вне
+                          зависимости от воскресных/праздничных дней
+                        </li>
+                      </div>
+                      <div class="benefits-section__list-item">
+                        <img
+                          class="benefits-section__icon"
+                          src="img/icon-done.svg"
+                          alt="галочка"
+                        />
+                        <li>заказать эвакуатор круглосуточно — 24/7</li>
+                      </div>
+                      <div class="benefits-section__list-item">
+                        <img
+                          class="benefits-section__icon"
+                          src="img/icon-done.svg"
+                          alt="галочка"
+                        />
+                        <li>
+                          выбрать самое экономически выгодное предложение — цены
+                          на эвакуационные услуги разные, разница может быть
+                          ощутимой
+                        </li>
+                      </div>
+                      <div class="benefits-section__list-item">
+                        <img
+                          class="benefits-section__icon"
+                          src="img/icon-done.svg"
+                          alt="галочка"
+                        />
+                        <li>
+                          договориться с транспортной компанией напрямую — без
+                          посредников и комиссионных
+                        </li>
+                      </div>
+                      <div class="benefits-section__list-item">
+                        <img
+                          class="benefits-section__icon"
+                          src="img/icon-done.svg"
+                          alt="галочка"
+                        />
+                        <li>
+                          осуществить эвакуацию авто недорого — без скрытых
+                          платежей, ненужных расходов
+                        </li>
+                      </div>
+                      <div class="benefits-section__list-item">
+                        <img
+                          class="benefits-section__icon"
+                          src="img/icon-done.svg"
+                          alt="галочка"
+                        />
+                        <li>
+                          вызвать эвакуатор в срочном порядке — охвачена
+                          Московская область, стоянки спецтехники базируются во
+                          многих районах Москвы, подача выполняется оперативно
+                        </li>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              src="img/man.png"
+              alt="Преимущества"
+              class="benefits-section__img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="how-to-section">
+        <div class="how-to-section__container">
+          <div class="how-to-section__item">
+            <h3>Как оплатить заказ на эвакуатор</h3>
+            <p>
+              Услуги по эвакуации вы оплачиваете непосредственно исполнителю —
+              транспортной компании, взявшейся за перевозку вашего ТС. Оплата
+              производится по завершении эвакуации, после выгрузки авто в
+              конечной точке в Москве.
+            </p>
+            <p>
+              Формы оплаты стандартные для Москвы: наличный/безналичный расчет
+              или банковский перевод. Эварус не взимает комиссионные с клиентов
+              за пользование сервисом.
+            </p>
+          </div>
+          <div class="how-to-section__item">
+            <h3>Как скоро прибудет эвакуатор</h3>
+            <p>
+              При оформлении заказа перевозчик сообщит вам расчетное время
+              прибытия эвакуатора в точку погрузки авто. Как правило, в Москве
+              это происходит в течение 10-15 мин., но зависит от загруженности
+              дорог Москвы и погодных условий. Перевозчик, принявший заказ,
+              будет информировать вас о наличии дорожных пробок и возможной
+              задержке подачи эвакуатора. Автопарки наших партнеров находятся во
+              многих районах Москвы, поэтому мы рекомендуем вам выбрать
+              ближайший эвакуатор, чтобы ускорить процесс транспортировки авто.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="slider-section">
+        <div class="slider-container">
+          <div class="slider-wrapper">
+            <h2>Какой вес может взять на борт эвакуатор</h2>
+            <p>
+              Эвакуаторы используют для перевозки всех видов автотранспорта: от
+              небольших квадроциклов до габаритных коммерческих авто. Эвакуатор
+              способен транспортировать автомобили до 8 т.
+            </p>
+            <h3>Виды эвакуаторов, доступные для заказа на ТутЭвакуатор.Ру:</h3>
+            <div class="slider">
+              <div class="slide">
+                <div class="slide-item">
+                  <h4>Эвакуатор с краном-манипулятором и прямой платформой</h4>
+                  <img
+                    src="img/evacuator-1.png"
+                    alt="Эвакуатор с краном-манипулятором и прямой платформой"
+                  />
+                  <p>
+                    Компактный и маневренный эвакуатор для транспортировки авто
+                    массой до 3,5 т. За счет вылета стрелы манипулятор
+                    осуществляет погрузку/разгрузку ТС с расстояния до 5 м. Он
+                    удобен для эвакуации автомобилей с узких улиц/дворов,
+                    небольших стоянок/парковок Москвы.
+                  </p>
+                </div>
+                <div class="slide-item">
+                  <h4>
+                    Эвакуатор с манипулятором и ломовой / сдвижной платформой
+                  </h4>
+                  <img
+                    src="img/evacuator-2.png"
+                    alt="Эвакуатор с манипулятором и ломовой/сдвижной платформой"
+                  />
+
+                  <p>
+                    Универсальный и надежный эвакуатор для эвакуации любых видов
+                    транспортных средств, включая крупную
+                    сельскохозяйственную/строительную/коммунальную технику, а
+                    также авто с низким клиренсом. Этот тип эвакуатора может
+                    быть задействован при перевозке как сильно пострадавших в
+                    аварии автомобилей, так и ТС, которые в состоянии
+                    самостоятельно заехать на платформу эвакуатора.
+                  </p>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="slide-item">
+                  <h4>Эвакуатор с лебедкой и платформой <br />с аппарелями</h4>
+                  <img
+                    src="img/evacuator-3.png"
+                    alt="Эвакуатор с краном-манипулятором и прямой платформой"
+                  />
+
+                  <p>
+                    Используется для перевозки ТС массой до 7 т. Автомобиль
+                    затаскивают на платформу эвакуатора по направляющим при
+                    помощи электрической/гидравлической/ручной лебедки.
+                    Эвакуатор данной модификации не применяется для
+                    транспортировки авто с АКПП или заблокированными колесами.
+                  </p>
+                </div>
+                <div class="slide-item">
+                  <h4>
+                    Эвакуатор с лебедкой и укороченной базой для частичной
+                    погрузки авто
+                  </h4>
+                  <img
+                    src="img/evacuator-4.png"
+                    alt="Эвакуатор с манипулятором и ломовой/сдвижной платформой"
+                  />
+
+                  <p>
+                    Основное назначение – транспортировка крупнотоннажной
+                    спецтехники, грузовых авто, автобусов.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-prev">
+              <img src="img/arrow-left.svg" alt="стрелка влево" />
+            </button>
+            <button class="slider-next">
+              <img src="img/arrow-right.svg" alt="стрелка вправо" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="evacuation-info">
+        <div class="evacuation-info__container">
+          <div class="evacuation-info__content">
+            <h2>Что необходимо сообщить при заказе эвакуатора</h2>
+            <p>
+              Чтобы выбрать эвакуатор с необходимыми техническими параметрами и
+              минимизировать расходы, при вызове эвакуатора следует указать:
+            </p>
+            <ul class="evacuation-info__list">
+              <div class="evacuation-info__list-item">
+                <img
+                  class="evacuation-info__icon"
+                  src="img/icon-done.svg"
+                  alt="галочка"
+                />
+                <li>марку, модель, год выпуска и полную массу авто</li>
+              </div>
+              <div class="evacuation-info__list-item">
+                <img
+                  class="evacuation-info__icon"
+                  src="img/icon-done.svg"
+                  alt="галочка"
+                />
+                <li>характер неисправности ТС</li>
+              </div>
+              <div class="evacuation-info__list-item">
+                <img
+                  class="evacuation-info__icon"
+                  src="img/icon-done.svg"
+                  alt="галочка"
+                />
+                <li>
+                  состояние ходовой части, трансмиссии, рулевого управления
+                </li>
+              </div>
+              <div class="evacuation-info__list-item">
+                <img
+                  class="evacuation-info__icon"
+                  src="img/icon-done.svg"
+                  alt="галочка"
+                />
+                <li>
+                  адрес подачи эвакуатора и пункт конечного назначения в Москве
+                </li>
+              </div>
+              <div class="evacuation-info__list-item">
+                <img
+                  class="evacuation-info__icon"
+                  src="img/icon-done.svg"
+                  alt="галочка"
+                />
+                <li>
+                  наличие ключей от авто и документов, подтверждающих право на
+                  управление ТС (водительские права, техпаспорт и доверенность,
+                  если вы не собственник авто)
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="evacuation-info__image">
+            <img src="img/woman-car-crash.png" alt="Женщина после аварии" />
+          </div>
+        </div>
+        <div class="evacuation-info__container">
+          <div class="evacuation-info__image">
+            <img src="img/wrench-mechanic.png" alt="Механик с гаечным ключом" />
+          </div>
+          <div class="evacuation-info__content">
+            <h2>Как эвакуировать авто с заблокированными колесами</h2>
+            <p>
+              При помощи сервиса ТутЭвакуатор.Ру вы сможете вызвать эвакуатор в
+              экстренных ситуациях, например, когда колеса авто заблокированы
+              или ходовая ТС критически пострадала в результате аварии.
+            </p>
+            <p>
+              Перевозка автомобиля с заблокированными колесами возможна
+              несколькими типами эвакуаторов:
+            </p>
+            <ul>
+              <div class="evacuation-info__list-item">
+                <img
+                  class="evacuation-info__icon"
+                  src="img/icon-done.svg"
+                  alt="галочка"
+                />
+                <li>
+                  Эвакуатор с манипулятором. На ТС устанавливают четыре колесных
+                  захвата, закрепленных на широких текстильных стропах. С
+                  помощью специальных петель оператор манипулятора регулирует
+                  длину строп, чтобы при перемещении на эвакуатор авто не
+                  кренилось. Стропы присоединяют к линейной или H-образной
+                  траверсе. Кран-манипулятор подхватывает траверсу за проушину,
+                  поднимает автомобиль и загружает на платформу эвакуатора.
+                </li>
+              </div>
+              <div class="evacuation-info__list-item">
+                <img
+                  class="evacuation-info__icon"
+                  src="img/icon-done.svg"
+                  alt="галочка"
+                />
+                <li>
+                  Эвакуатор с гидроплатформой (без аппарелей) и лебедкой. Авто
+                  приподнимают домкратом, под заблокированные колеса
+                  устанавливают подкатные тележки. При помощи лебедки авто
+                  затягивают на наклонную платформу эвакуатора. После этого
+                  платформу эвакуатора приводят в горизонтальное положение.
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="tab-container">
+        <div class="tabs">
+          <button class="tab-link active" data-tab="cost">Стоимость</button>
+          <button class="tab-link" data-tab="how-to-order">Как заказать</button>
+        </div>
+        <div id="cost" class="tab-content active">
+          <h2>Стоимость вызова эвакуатора для перевозки авто</h2>
+          <p>
+            На сайте Эварус представлены цены, выставленные перевозчиками за
+            стандартную услугу эвакуации авто по Москве и области. Начальная
+            стоимость транспортировки зависит от габаритов и веса ТС: перевозка
+            мотоцикла/малолитражки будет стоить дешевле, чем
+            внедорожника/минивена. Дороже всего обойдется эвакуация неисправной
+            спецтехники и грузового транспорта.
+          </p>
+          <span
+            >На стоимость услуги эвакуатора в Москве влияет ряд факторов:</span
+          >
+          <ul class="tab-container__list">
+            <div class="tab-container__list-item">
+              <img
+                class="tab-container__icon"
+                src="img/icon-done.svg"
+                alt="галочка"
+              />
+              <li>класс, масса, степень повреждения транспортируемого авто</li>
+            </div>
+            <div class="tab-container__list-item">
+              <img
+                class="tab-container__icon"
+                src="img/icon-done.svg"
+                alt="галочка"
+              />
+              <li>
+                первоначальное месторасположение ТС в Москве и дальность
+                следования
+              </li>
+            </div>
+            <div class="tab-container__list-item">
+              <img
+                class="tab-container__icon"
+                src="img/icon-done.svg"
+                alt="галочка"
+              />
+              <li>сложность погрузочно-разгрузочных операций</li>
+            </div>
+            <div class="tab-container__list-item">
+              <img
+                class="tab-container__icon"
+                src="img/icon-done.svg"
+                alt="галочка"
+              />
+              <li>дорожные и погодные условия Москвы</li>
+            </div>
+          </ul>
+          <p>
+            Окончательная цена зависит от того, куда подавать эвакуатор и где
+            впоследствии выгружать автомобиль: Москва это будет или Московская
+            область. Транспортировка по МО оплачивается согласно прайсу, плюс
+            тариф за каждый км пробега от МКАД. Суммарная оплата увеличится,
+            если машина находится в кювете/яме/гараже/водоеме и подъезд к ней
+            усложнен. Стоимость возрастет и при наличии заблокированных
+            колес/рулевого управления или серьезного повреждения ТС. <br />Все
+            нюансы эвакуации авто вы сможете обсудить с перевозчиком.
+            Ознакомившись с конкретной ситуацией, он озвучит цену и сроки подачи
+            эвакуатора.
+          </p>
+          <span
+            >В каких случаях возможно изменение стоимости услуги после прибытия
+            эвакуатора к месту погрузки авто:</span
+          >
+          <ul>
+            <div class="tab-container__list-item">
+              <img
+                class="tab-container__icon"
+                src="img/icon-done.svg"
+                alt="галочка"
+              />
+              <li>простой эвакуатора по вине клиента</li>
+            </div>
+            <div class="tab-container__list-item">
+              <img
+                class="tab-container__icon"
+                src="img/icon-done.svg"
+                alt="галочка"
+              />
+              <li>смена маршрута после размещения заказа</li>
+            </div>
+            <div class="tab-container__list-item">
+              <img
+                class="tab-container__icon"
+                src="img/icon-done.svg"
+                alt="галочка"
+              />
+              <li>
+                непредвиденное усложнение эвакуации из-за неправильных/неполных
+                данных о ТС
+              </li>
+            </div>
+          </ul>
+          <p>
+            Во избежание незапланированных трат, сообщите диспетчерской службе
+            подробные сведения о своем автомобиле и обстоятельствах его поломки.
+          </p>
+        </div>
+        <div id="how-to-order" class="tab-content">
+          <h2>Стоимость вызова эвакуатора для перевозки авто</h2>
+          <p>
+            Воспользовавшись онлайн-ресурсом Эварус, вы сократите время на поиск
+            эвакуатора в Москве, МО и закажете услугу по оптимальной цене. Вам
+            не придется обзванивать знакомых или долго искать телефон эвакуатора
+            в интернете. Проанализируйте предложения на нашем сайте, выберите
+            лучшие условия и стоимость перевозки.
+          </p>
+          <span
+            >Как вызвать эвакуатор с помощью онлайн-сервиса
+            ТутЭвакуатор.Ру:</span
+          >
+          <ul>
+            <div class="tab-container__list-item">
+              <img class="tab-container__icon" src="img/1.svg" alt="галочка" />
+              <li>
+                Ознакомьтесь с картой Москвы и Московской области, на которой
+                желтыми маркерами обозначены стоянки эвакуаторов.
+              </li>
+            </div>
+            <div class="tab-container__list-item">
+              <img class="tab-container__icon" src="img/2.svg" alt="галочка" />
+              <li>
+                Увеличьте масштаб и определите, какой из адресов находится рядом
+                с местом вашей дислокации
+              </li>
+            </div>
+            <div class="tab-container__list-item">
+              <img class="tab-container__icon" src="img/3.svg" alt="галочка" />
+              <li>
+                Выберите ближайший эвакуатор и нажмите на соответствующий маркер
+              </li>
+            </div>
+            <div class="tab-container__list-item">
+              <img class="tab-container__icon" src="img/4.svg" alt="галочка" />
+              <li>
+                Просмотрите детальную информацию о перевозчике: возможные
+                способы погрузки ТС, комплектацию автопарка, типы
+                транспортируемых авто прайс с ценами
+              </li>
+            </div>
+            <div class="tab-container__list-item">
+              <img class="tab-container__icon" src="img/5.svg" alt="галочка" />
+              <li>
+                Кликните по голубому полю внизу карточки перевозчика и возьмите
+                телефонный номер компании
+              </li>
+            </div>
+            <div class="tab-container__list-item">
+              <img class="tab-container__icon" src="img/6.svg" alt="галочка" />
+              <li>
+                Созвонитесь с диспетчером фирмы, обсудите детали эвакуации в
+                Москве/МО и стоимость заказа
+              </li>
+            </div>
+            <div class="tab-container__list-item">
+              <img class="tab-container__icon" src="img/7.svg" alt="галочка" />
+              <li>
+                Сравните цены и условия перевозки у нескольких компаний,
+                выберите наиболее подходящий для себя вариант
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <button id="scrollButton" class="hidden">
+      <img src="img/arrow-top.svg" alt="стрелка вверх" />
+    </button>
+    <footer id="footer">
+      <div class="footer__container">
+        <img src="img/logo.svg" alt="Логотип" />
+        <div class="footer__nav">
+          <a href="#">Вызвать эвакуатор</a>
+          <a href="#">Добавить эвакуатор на сайт</a>
+          <a href="#">Помощь</a>
+          <a href="#">Правила оплаты</a>
+          <a href="#">Защита персональных данных</a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
